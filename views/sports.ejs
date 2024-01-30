@@ -1,0 +1,37 @@
+
+<%- include('partials/header.ejs') %>
+
+<main>
+    <div id="displayContainer">
+        <%- include('partials/sidebar.ejs') %>
+    
+        <div id="mainContent">
+            <!-- <div id="blueCircle"></div> -->
+            <h1><strong>Sports</strong></h1>
+            <!-- Blog posts -->
+            <div id="blogCards">
+        
+                <% sports.forEach(blog => { %>
+                    <div class="card">
+                        <img src="images/<%= blog.title %>.jpg" alt="">
+                        <h3><%= blog.title %></h3>
+                        <div class="author"><%= blog.author %></div>
+                        <div class="description">
+                            <p><%= blog.description.slice(0, 70) %>...</p>
+                        </div>
+                        <button type="button">
+                            <a href= "sports<%= sports.indexOf(blog) %>">
+                                View
+                            </a>
+                        </button> 
+                    </div>
+                <% }); %>
+            </div>
+            
+        </div>
+    </div>
+    
+</main>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<%- include('partials/header.ejs') %>
+
+<form action="/" method="POST">
+    <div class="createContainer">
+        <div id="createDiv1">
+            <label for="subgroup">Subgroup:</label>
+            <select name="subgroup" id="">
+                <option value="educational">Educational</option>
+                <option value="food">Food</option>
+                <option value="fitness">Fitness</option>
+                <option value="sports">Sports</option>
+            </select>
+        </div>
+        
+
+        <div id="createDiv2">
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" placeholder="Enter the title for your blog">
+            
+        </div>
+        <div id="createDiv3">
+            <label for="author">Author Name:</label>
+            <input type="text" name="author" id="author" placeholder="Enter your name">  
+        </div>
+        <div id="createDiv4">
+            <label for="description">Description:</label>
+            <textarea name="description" id="description" rows="5" placeholder="Enter the blog content here"></textarea>
+            
+        </div>
+        
+        <div id="createDiv5">
+            <input type="submit" value="submit">
+        </div>
+        
+        
+    </div>
+</form>
+
+</body>
+</html>
